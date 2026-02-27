@@ -21,22 +21,17 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-stone-50">
+    <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-[#2D241E]">
-        {/* Cultural Pattern Overlay */}
-        <div className="absolute inset-0 z-0 opacity-10 pointer-events-none" style={{ 
-          backgroundImage: `url("https://www.transparenttextures.com/patterns/az-subtle.png")`,
-          backgroundRepeat: 'repeat'
-        }}></div>
-        
-        <div className="absolute inset-0 z-0">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-[#1A1614]">
+        {/* Background Gallery Overlay */}
+        <div className="absolute inset-0 z-0 opacity-40">
           <img 
             src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?q=80&w=1920&auto=format&fit=crop" 
-            className="w-full h-full object-cover opacity-30"
-            alt="Vizag Heritage"
+            className="w-full h-full object-cover"
+            alt="Artisan Gallery Background"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#2D241E]/80 via-[#2D241E]/40 to-[#2D241E]"></div>
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -45,18 +40,24 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <h1 className="text-5xl md:text-8xl font-serif font-bold text-[#F5E6D3] mb-8 leading-tight tracking-tight">
+            <h1 className="text-5xl md:text-8xl font-serif font-bold text-white mb-8 leading-tight tracking-tight">
               Local for Vocal – <br />
               <span className="text-[#D4A373] italic">Empowering Vizag Artisans</span>
             </h1>
-            <p className="text-xl md:text-2xl text-[#E9D5C3] mb-12 font-light leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-stone-300 mb-12 font-light leading-relaxed max-w-3xl mx-auto">
               Connecting artisans directly to customers through transparency and fair trade.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
-              <Link to="/products" className="bg-[#D4A373] text-[#2D241E] px-12 py-5 rounded-full text-lg font-bold hover:bg-[#E9D5C3] transition-all shadow-2xl shadow-black/20">
+              <Link 
+                to="/products" 
+                className="bg-[#D4A373] text-[#1A1614] px-12 py-5 rounded-full text-lg font-bold hover:bg-[#E9D5C3] transition-all shadow-2xl shadow-black/40"
+              >
                 Explore Products
               </Link>
-              <Link to="/artisans" className="bg-white/5 backdrop-blur-md text-[#F5E6D3] border border-[#F5E6D3]/20 px-12 py-5 rounded-full text-lg font-bold hover:bg-white/10 transition-all">
+              <Link 
+                to="/artisans" 
+                className="bg-transparent text-white border border-white/30 px-12 py-5 rounded-full text-lg font-bold hover:bg-white/10 transition-all"
+              >
                 Meet the Artisans
               </Link>
             </div>
@@ -103,7 +104,7 @@ export default function Home() {
       </section>
 
       {/* Featured Products */}
-      <section className="py-32 bg-stone-50">
+      <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
             <div className="max-w-2xl">
@@ -158,7 +159,7 @@ export default function Home() {
       </section>
 
       {/* Categories */}
-      <section className="py-24 bg-stone-100/50">
+      <section className="py-24 bg-emerald-50/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-serif font-bold text-stone-900 mb-12 text-center">Heritage Categories</h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
